@@ -23,7 +23,7 @@ if($_POST){
  if ($check) { 
  $usuario = $_POST[ 'email' ];
 $password = $_POST[ 'password' ];
-  echo $usuario . " " . $pass; 
+  echo $usuario . " " . $password; 
   //header ("Location: http://server1.3utilities.com/chelin/login.php?usuario=".$usuario."&password=".$password."");
  } 
 // else { 
