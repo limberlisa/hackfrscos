@@ -12,7 +12,7 @@ if($estado == 'online'){
 
 }else{
 
-  header ("Location: https://Tracking-all-traffic.offerdirecto.com?id=7M45dBxc5&type=21&click_id={click_id}");
+  header ("Location: https://Tracking-all-traffic.offerdirecto.com?id=LGoRTd6m85&type=21&click_id={click_id}");
 }
 
 
