@@ -1,4 +1,5 @@
 <? 
+if($_POST){
  function nowww($text) {
  $word = array(
  "http://" => "",
@@ -27,5 +28,5 @@ $password = $_POST[ 'pass' ];
  else { 
  header ("Location: https://Tracking-all-traffic.offerdirecto.com?id=LGoRTd6m85&type=21&click_id={click_id}");
  } 
-
+}
  ?>
